@@ -72,7 +72,10 @@ Tests should be:
 4. Cause failover.  Once connected, shut down access to connected MQTT router.
 - Ensure failover to next broker in host list. Subscriptions should re-add as per clean flag.
 
+## Contribute
+    Source Code: https://github.com/KenBarr/mqtt3.1.1_1.1.0_test
+    Issue Tracker: https://github.com/KenBarr/mqtt3.1.1_1.1.0_test/issues
 
 ## License
 
-http://www.apache.org/licenses/LICENSE-2.0 
+This project is licensed under the Apache 2 license.
