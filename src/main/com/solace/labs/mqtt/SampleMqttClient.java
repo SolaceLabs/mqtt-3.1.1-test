@@ -127,7 +127,7 @@ public class SampleMqttClient implements MqttCallbackExtended {
 			System.out.println("Connection attempt! To: " + brokerList[0]);
             myClient.connect(connOpt);
             System.out.println("Blocking for known issue: #233");
-            sync.doWait((long)connOpt.getConnectionTimeout());
+            sync.doWait((long)connOpt.getConnectionTimeout() * 1000);
             System.out.println("Received initial connection signal, continuing");
         } catch (MqttException ex){
 			// TODO Auto-generated catch block
