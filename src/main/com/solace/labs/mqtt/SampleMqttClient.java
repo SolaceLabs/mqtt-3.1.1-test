@@ -17,6 +17,8 @@
 
 package com.solace.labs.mqtt;
 
+import java.util.Properties;
+
 import org.eclipse.paho.client.mqttv3.DisconnectedBufferOptions;
 import org.eclipse.paho.client.mqttv3.IMqttDeliveryToken;
 import org.eclipse.paho.client.mqttv3.MqttAsyncClient;
@@ -26,6 +28,7 @@ import org.eclipse.paho.client.mqttv3.MqttException;
 import org.eclipse.paho.client.mqttv3.MqttMessage;
 import org.eclipse.paho.client.mqttv3.MqttSecurityException;
 import org.eclipse.paho.client.mqttv3.persist.MemoryPersistence;
+import org.eclipse.paho.client.mqttv3.logging.*;
 
 public class SampleMqttClient implements MqttCallbackExtended {
 
@@ -38,8 +41,8 @@ public class SampleMqttClient implements MqttCallbackExtended {
 	static final String M2MIO_DOMAIN = "testDomain";
 	static final String M2MIO_STUFF = "things";
 	static final String M2MIO_THING = "myDeviceID";
-	static final String M2MIO_USERNAME = "myClientUsername";
-	static final String M2MIO_PASSWORD_MD5 = "password";
+	static final String M2MIO_USERNAME = System.getenv("MQTT_USERNAME");
+	static final String M2MIO_PASSWORD_MD5 = System.getenv("MQTT_PASSWORD");
 	static final String M2MIO_CLIENTNAME_TOPIC = "$SYS/client/client-name";
 	static final String M2MIO_REPLYTO_TOPIC = "$SYS/client/reply-to";
 
@@ -51,8 +54,8 @@ public class SampleMqttClient implements MqttCallbackExtended {
 	
 
 	public SampleMqttClient() {
-		BROKER_URL1 = System.getenv("BROKER_URL1");
-		BROKER_URL2 = System.getenv("BROKER_URL2");
+		BROKER_URL1 = System.getenv("MQTT_BROKER_URL1");
+		BROKER_URL2 = System.getenv("MQTT_BROKER_URL2");
 		System.out.println("Broker list will be: " + BROKER_URL1 + " + " + BROKER_URL2);
 		sync = new SyncronizeObj();
 	}
@@ -103,6 +106,8 @@ public class SampleMqttClient implements MqttCallbackExtended {
 		connOpt.setKeepAliveInterval(30);
 		connOpt.setConnectionTimeout(60);
 		connOpt.setAutomaticReconnect(true);
+		Properties props = new Properties();
+		connOpt.setSSLProperties(props);
 		connOpt.setUserName(M2MIO_USERNAME);
 		connOpt.setPassword(M2MIO_PASSWORD_MD5.toCharArray());
 		connOpt.setWill("mqtt/disconnect/ungracefull", ("MQTT Client: " + M2MIO_USERNAME + " ungracefull disconnect").getBytes(), 0, false);
