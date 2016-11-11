@@ -13,6 +13,8 @@ This project depends on maven for building. To build the class locally, check ou
     git clone https://github.com/ken.barr/mqtt_3.1.1_1.1.0_test.git
     cd /mqtt_3.1.1_1.1.0_test
     mvn compile
+      or
+    gradle build
    
 ## Code Example
 
