@@ -74,10 +74,24 @@ Tests should be:
 4. Cause failover.  Once connected, shut down access to connected MQTT router.
 - Ensure failover to next broker in host list. Subscriptions should re-add as per clean flag.
 
-## Contribute
-    Source Code: https://github.com/KenBarr/mqtt3.1.1_1.1.0_test
-    Issue Tracker: https://github.com/KenBarr/mqtt3.1.1_1.1.0_test/issues
+## Contributing
+
+Please read [CONTRIBUTING](CONTRIBUTING.md) for details on our code of conduct, and the process for submitting pull requests to us.
+
+## Authors
+
+See the list of [contributors](https://github.com/SolaceLabs/mqtt3.1.1_1.1.0_test/graphs/contributors) who participated in this project.
 
 ## License
 
-This project is licensed under the Apache 2 license.
+This project is licensed under the Apache License, Version 2.0. - See the [LICENSE](LICENSE) file for details.
+
+## Resources
+
+For more information about working with Paho MQTT APIs:
+- [Eclipse PAho MQTT APIs](http://www.eclipse.org/paho/)
+
+For more information about Solace technology in general please visit these resources:
+- The Solace Developer Portal website at: http://dev.solace.com
+- Understanding [Solace technology.](http://dev.solace.com/tech/)
+- Ask the [Solace community](http://dev.solace.com/community/).
