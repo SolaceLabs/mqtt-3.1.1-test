@@ -11,7 +11,7 @@ This project is the base example from which interoperability with Solace message
 This project depends on maven for building. To build the class locally, check out the project and build from source by doing the following:
 
     git clone https://github.com/SolaceLabs/mqtt-3.1.1-test
-    cd /mqtt_3.1.1_1.1.0_test
+    cd /mqtt-3.1.1-test
     mvn compile
       or
     gradle build
