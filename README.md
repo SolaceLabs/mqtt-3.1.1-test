@@ -10,7 +10,7 @@ This project is the base example from which interoperability with Solace message
 
 This project depends on maven for building. To build the class locally, check out the project and build from source by doing the following:
 
-    git clone https://github.com/KenBarr/mqtt3.1.1_1.1.0_test
+    git clone https://github.com/SolaceLabs/mqtt-3.1.1-test
     cd /mqtt_3.1.1_1.1.0_test
     mvn compile
       or
@@ -80,7 +80,7 @@ Please read [CONTRIBUTING](CONTRIBUTING.md) for details on our code of conduct, 
 
 ## Authors
 
-See the list of [contributors](https://github.com/SolaceLabs/mqtt3.1.1_1.1.0_test/graphs/contributors) who participated in this project.
+See the list of [contributors](https://github.com/SolaceLabs/mqtt-3.1.1-test/graphs/contributors) who participated in this project.
 
 ## License
 
