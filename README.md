@@ -1,6 +1,6 @@
 ## Synopsis
 
-This project provides a simple example that shows how to use MQTT Paho Java 1.1.0 features of auto-reconnect and publish while offline.  These features enhance the MQTT system high availability. 
+This project provides a simple example that shows how to use MQTT Paho Java 1.2.0 features of auto-reconnect and publish while offline.  These features enhance the MQTT system high availability. 
 
 ## Motivation
 
