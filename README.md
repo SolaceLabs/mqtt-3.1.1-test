@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/SolaceLabs/mqtt-3.1.1-test.svg?branch=master)](https://travis-ci.org/SolaceLabs/mqtt-3.1.1-test)
+
 ## Synopsis
 
 This project provides a simple example that shows how to use MQTT Paho Java 1.2.0 features of auto-reconnect and publish while offline.  These features enhance the MQTT system high availability. 
